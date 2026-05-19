@@ -1,8 +1,8 @@
-import type { PainZone } from "@/data/acupressureData";
+import type { LearningEntry } from "@/data/acupressureData";
 import { ZoneIcon } from "./ZoneIcon";
 
 type ZoneCardProps = {
-  zone: PainZone;
+  zone: LearningEntry;
   isSelected: boolean;
   onSelect: (zoneId: string) => void;
 };
@@ -20,7 +20,10 @@ export function ZoneCard({ zone, isSelected, onSelect }: ZoneCardProps) {
       type="button"
     >
       <ZoneIcon icon={zone.icon} />
-      <span className="mt-4 text-lg font-bold text-ink">{zone.name}</span>
+      <span className="mt-4 rounded-full bg-white/78 px-2.5 py-1 text-xs font-bold uppercase text-sage-700">
+        {zone.type === "zone" ? "zone" : "symptôme"}
+      </span>
+      <span className="mt-3 text-lg font-bold text-ink">{zone.name}</span>
       <span className="mt-2 text-sm leading-5 text-ink/70">{zone.shortDescription}</span>
     </button>
   );

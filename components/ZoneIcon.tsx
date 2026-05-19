@@ -1,7 +1,7 @@
-import type { PainZone } from "@/data/acupressureData";
+import type { LearningEntry } from "@/data/acupressureData";
 
 type ZoneIconProps = {
-  icon: PainZone["icon"];
+  icon: LearningEntry["icon"];
 };
 
 const iconLabels: Record<string, string> = {
@@ -37,12 +37,6 @@ export function ZoneIcon({ icon }: ZoneIconProps) {
             <path d="M9 5.5v5.2c0 1.4-.7 2.8-1.8 3.7L6 15.5" />
             <path d="M15 5.5v5.2c0 1.4.7 2.8 1.8 3.7l1.2 1.1" />
             <path d="M7 19c3.2-1.3 6.8-1.3 10 0" />
-          </>
-        )}
-        {icon === "shoulders" && (
-          <>
-            <path d="M12 5a3 3 0 0 0-3 3v1.5h6V8a3 3 0 0 0-3-3Z" />
-            <path d="M4 18c1.2-3.4 4.2-5.5 8-5.5s6.8 2.1 8 5.5" />
           </>
         )}
         {icon === "back" && (

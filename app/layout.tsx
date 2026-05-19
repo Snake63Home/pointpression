@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PointPression",
+  title: "PointPression V2",
   description:
-    "MVP statique en français pour découvrir des points d'acupression selon la zone douloureuse.",
+    "Antisèche professionnelle statique pour acupression, MTC, protocoles, syndromes et méridiens.",
   applicationName: "PointPression"
 };
 
